@@ -9,12 +9,12 @@ You can get started by cloning the project to your local machine. Make sure you 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/lostf1sh/website
+git clone https://github.com/d-niz/dniz.tr.git
 ```
 
 2. Navigate to the project folder:
 ```bash
-cd lostf1sh.github.io
+cd dniz.tr
 ```
 
 3. Install the dependencies:
