@@ -78,7 +78,7 @@ onUnmounted(() => {
     dniz.tr
   </div>
   <div>
-    deniz (aka dniz or denzz), a normal person, arch enjoyer, idk who i am. Contact: denzz@denzz.xyz
+    deniz (aka dniz or denzz), a normal person, arch enjoyer, idk who i am. contact: denzz@denzz.xyz GPG:0x433B49A88191C661
   </div>
 
   <div class="flex gap-2 items-center text-sm mt-2" :class="discordStatusColor">
@@ -104,7 +104,7 @@ onUnmounted(() => {
     <a href="https://signal.me/#eu/10FRPQwWfQi-MtUfIIBKrjcMynVpyW-UVTrt8KcYdwAOgSPuSwVETbfbJ-WuseF0" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fab', 'signal-messenger']" class="w-5 h-5" />
     </a>
-    <a href="https://signal.me/#eu/10FRPQwWfQi-MtUfIIBKrjcMynVpyW-UVTrt8KcYdwAOgSPuSwVETbfbJ-WuseF0" target="_blank" class="flex items-center justify-center">
+    <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/0FF28A34E3098C31CEAD6034433B49A88191C661" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fas', 'key']" class="w-5 h-5" />
     </a>
   </div>
