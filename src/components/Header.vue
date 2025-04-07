@@ -1,8 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger, faKey} from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faKey } from '@fortawesome/free-solid-svg-icons';
 
 // FontAwesome ikonlarını kaydetme
 library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger,faKey);
