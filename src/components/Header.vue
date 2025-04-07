@@ -1,11 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger, fakey} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // FontAwesome ikonlarını kaydetme
-library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger);
+library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger,fakey);
 
 const discordStatusColor = ref('text-catppuccin-gray');
 const discordStatus = ref('offline');
@@ -102,6 +102,9 @@ onUnmounted(() => {
     </a>
     <a href="https://signal.me/#eu/10FRPQwWfQi-MtUfIIBKrjcMynVpyW-UVTrt8KcYdwAOgSPuSwVETbfbJ-WuseF0" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fab', 'signal-messenger']" class="w-5 h-5" />
+    </a>
+    <a href="https://signal.me/#eu/10FRPQwWfQi-MtUfIIBKrjcMynVpyW-UVTrt8KcYdwAOgSPuSwVETbfbJ-WuseF0" target="_blank" class="flex items-center justify-center">
+      <font-awesome-icon :icon="['fas', 'key']" class="w-5 h-5" />
     </a>
   </div>
 </template>
