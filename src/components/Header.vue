@@ -1,11 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger, fakey} from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger, faKey} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // FontAwesome ikonlarını kaydetme
-library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger,fakey);
+library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger,faKey);
 
 const discordStatusColor = ref('text-catppuccin-gray');
 const discordStatus = ref('offline');
