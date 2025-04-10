@@ -78,7 +78,7 @@ onUnmounted(() => {
     dniz.tr
   </div>
   <div>
-    deniz (aka dniz or denzz), a normal person, arch enjoyer, idk who i am. contact: denzz@denzz.xyz GPG:0x433B49A88191C661
+    deniz (aka dniz or denzz), a normal person, arch enjoyer, idk who i am. contact: denzz@denzz.xyz
   </div>
 
   <div class="flex gap-2 items-center text-sm mt-2" :class="discordStatusColor">
