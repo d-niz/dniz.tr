@@ -3,7 +3,6 @@ import Header from './components/Header.vue';
 import Uses from './components/Uses.vue';
 import Projects from './components/Projects.vue';
 import Footer from './components/Footer.vue';
-import RecentTracks from './components/RecentTracks.vue';
 import Wordpress from './components/wordpress.vue';
 </script>
 
