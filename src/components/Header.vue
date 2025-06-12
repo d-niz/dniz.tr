@@ -79,34 +79,25 @@ onUnmounted(() => {
     dniz.tr
   </div>
   <div>
-    deniz (aka dniz or denzz), a normal person, arch enjoyer, idk who i am. contact: denzz@denzz.xyz
+    deniz. contact: denzz@denzz.xyz
   </div>
 
   <div class="flex gap-2 items-center text-sm mt-2" :class="discordStatusColor">
     <font-awesome-icon :icon="['fab', 'discord']" class="text-xl w-5 h-5" />
     <div>
-      i'm currently {{ discordStatus }} on Discord.
+      im currently {{ discordStatus }} on discord.
     </div>
   </div>
 
   <div class="flex gap-10 mt-5 text-xl">
-    <a href="https://www.instagram.com/msadenz.z" target="_blank" class="flex items-center justify-center">
-      <font-awesome-icon :icon="['fab', 'instagram']" class="w-5 h-5" />
-    </a>
     <a href="https://discord.com/user/1259949511078318287" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fab', 'discord']" class="w-5 h-5" />
     </a>
     <a href="https://mastodon.com.tr/@denzz" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fab', 'mastodon']" class="w-5 h-5" />
     </a>
-    <a href="https://t.me/use_rname" target="_blank" class="flex items-center justify-center">
-      <font-awesome-icon :icon="['fab', 'telegram']" class="w-5 h-5" />
-    </a>
     <a href="https://signal.me/#eu/10FRPQwWfQi-MtUfIIBKrjcMynVpyW-UVTrt8KcYdwAOgSPuSwVETbfbJ-WuseF0" target="_blank" class="flex items-center justify-center">
       <font-awesome-icon :icon="['fab', 'signal-messenger']" class="w-5 h-5" />
-    </a>
-    <a href="https://keys.openpgp.org/vks/v1/by-fingerprint/0FF28A34E3098C31CEAD6034433B49A88191C661" target="_blank" class="flex items-center justify-center">
-      <font-awesome-icon :icon="['fas', 'key']" class="w-5 h-5" />
     </a>
   </div>
 </template>
