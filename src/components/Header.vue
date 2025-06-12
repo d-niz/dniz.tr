@@ -1,9 +1,22 @@
 // tamamen yapay zeka kullandım kod iyi olmayabilir ama çalısa yeter vue ogrenecek zamanim yok vue bilmiom
 <template>
-  <div>
-    <p :class="discordStatusColor">Discord durumu: {{ discordStatus }}</p>
-    <p :class="lastfmColor" v-if="lastfmTrack">Şu an çalan: {{ lastfmTrack }}</p>
-    <font-awesome-icon icon="music" />
+  <div class="space-y-2">
+    <div class="flex items-center gap-2">
+      <font-awesome-icon icon="discord" />
+      <span :class="discordStatusColor">Discord: {{ discordStatus }}</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <font-awesome-icon icon="music" />
+      <span :class="lastfmColor">
+        <template v-if="lastfmTrack">
+          {{ lastfmTrack }}
+        </template>
+        <template v-else>
+          Dinlenmiyor
+        </template>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -20,6 +33,7 @@ const discordStatusColor = ref('text-catppuccin-gray');
 const discordStatus = ref('offline');
 const spotify = ref(null);
 const ws = ref(null);
+
 const lastfmTrack = ref(null);
 const lastfmColor = ref('text-catppuccin-gray');
 
@@ -37,7 +51,6 @@ const connectWebSocket = () => {
     const message = JSON.parse(event.data);
     if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
       const data = message.d;
-
       spotify.value = data.spotify;
 
       switch (data.discord_status) {
@@ -72,7 +85,7 @@ const connectWebSocket = () => {
 
 const fetchLastFmNowPlaying = async () => {
   const API_KEY = '25456cc62de7291306a1fe391ea550b9';
-  const USERNAME = 'den-zz'; 
+  const USERNAME = 'den-zz';
   const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=1`;
 
   try {
