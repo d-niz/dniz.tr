@@ -1,9 +1,17 @@
+// tamamen yapay zeka kullandım kod iyi olmayabilir ama çalısa yeter vue ogrenecek zamanim yok vue bilmiom
+<template>
+  <div>
+    <p :class="discordStatusColor">Discord durumu: {{ discordStatus }}</p>
+    <p :class="lastfmColor" v-if="lastfmTrack">Şu an çalan: {{ lastfmTrack }}</p>
+    <font-awesome-icon icon="music" />
+  </div>
+</template>
+
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger } from '@fortawesome/free-brands-svg-icons';
-import { faKey, faMusic } from '@fortawesome/free-solid-svg-icons'; // <-- faMusic doğru paketten
-
+import { faKey, faMusic } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faDiscord, faInstagram, faMastodon, faTelegram, faSignalMessenger, faKey, faMusic);
@@ -12,7 +20,6 @@ const discordStatusColor = ref('text-catppuccin-gray');
 const discordStatus = ref('offline');
 const spotify = ref(null);
 const ws = ref(null);
-
 const lastfmTrack = ref(null);
 const lastfmColor = ref('text-catppuccin-gray');
 
@@ -20,7 +27,6 @@ const connectWebSocket = () => {
   ws.value = new WebSocket('wss://api.lanyard.rest/socket');
 
   ws.value.onopen = () => {
-    console.log('WebSocket connected');
     ws.value.send(JSON.stringify({
       op: 2,
       d: { subscribe_to_id: '1259949511078318287' }
@@ -29,7 +35,6 @@ const connectWebSocket = () => {
 
   ws.value.onmessage = (event) => {
     const message = JSON.parse(event.data);
-    console.log('Received WebSocket message:', message);
     if (message.t === "INIT_STATE" || message.t === "PRESENCE_UPDATE") {
       const data = message.d;
 
